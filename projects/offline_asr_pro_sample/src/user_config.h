@@ -80,6 +80,8 @@ chipintelli提供的部分开发板和模组，可以通过下面的宏选择，
 #define PLAY_ENTER_WAKEUP_EN        1   //是否在唤醒时播放提示音。1:是 0:否。
 #define PLAY_EXIT_WAKEUP_EN         1   //是否在切换到只监听唤词状态时播放提示音。1:是 0:否。
 #define PLAY_OTHER_CMD_EN           1   //是否在识别到命令词时播放提示音。1:是 0:否。
+#define WAKEUP_DING_TEST_ENABLE     1   //唤醒后播放测试提示音,播完后回到只监听唤醒词状态。
+#define WAKEUP_DING_TEST_VOICE_ID   3000
 #define ADAPTIVE_THRESHOLD          0
 #define ASR_SKIP_FRAME_CONFIG       0
 #define EXIT_WAKEUP_TIME            15*1000 /*退出唤醒超时时间,单位毫秒。超过此配置指定的时间长度

@@ -497,7 +497,11 @@ void enter_wakeup_deal(uint32_t exit_wakup_ms, cmd_handle_t cmd_handle )
         if(SYS_STATE_UNWAKEUP == get_wakeup_state())
         {
             #if PLAY_ENTER_WAKEUP_EN
+            #if WAKEUP_DING_TEST_ENABLE
+            prompt_play_by_voice_id(WAKEUP_DING_TEST_VOICE_ID, play_exit_wakeup_done_cb, true);
+            #else
             prompt_play_by_cmd_handle(cmd_handle, -1, play_enter_wakeup_done_cb,true);
+            #endif
             #else
             play_enter_wakeup_done_cb(cmd_handle);
             #endif
